@@ -1,2 +1,8 @@
 [build-system]
-requires = ["setuptools", "wheel", "numpy>=1.14", "cython>=0.28", "raysect==0.8.0"]
+requires = [
+    "setuptools",
+    "wheel",
+    "numpy>=1.14",
+    "cython>=0.28",
+    "raysect @ git+https://github.com/munechika-koyo/source.git@feature/tetrahedra_mesh",
+]

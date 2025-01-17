@@ -16,7 +16,7 @@
 # See the Licence for the specific language governing permissions and limitations
 # under the Licence.
 
-from raysect.core.math.function.float cimport Function2D
+from raysect.core.math.function.float cimport Function1D, Function2D
 
 
 cdef class Integrator2D:
@@ -24,4 +24,4 @@ cdef class Integrator2D:
     cdef:
         Function2D function
 
-    cdef double evaluate(self,double x_lower, double x_upper, double y_lower, double y_upper) except? -1e999
+    cdef double evaluate(self,double x_lower, double x_upper, Function1D y_lower, Function1D y_upper) except? -1e999

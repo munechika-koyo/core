@@ -18,10 +18,7 @@
 # See the Licence for the specific language governing permissions and limitations
 # under the Licence.
 
-from raysect.core.math.function.float cimport autowrap_function2d
-
-from libc.math cimport INFINITY
-cimport cython
+from raysect.core.math.function.float cimport Function1D, autowrap_function2d
 
 
 cdef class Integrator2D:
@@ -45,18 +42,18 @@ cdef class Integrator2D:
 
         self.function = autowrap_function2d(func)
 
-    cdef double evaluate(self, double x_lower, double x_upper, double y_lower, double y_upper) except? -1e999:
+    cdef double evaluate(self, double x_lower, double x_upper, Function1D y_lower, Function1D y_upper) except? -1e999:
 
         raise NotImplementedError("The evaluate() method has not been implemented.")
 
-    def __call__(self, double x_lower, double x_upper, double y_lower, double y_upper):
+    def __call__(self, double x_lower, double x_upper, Function1D y_lower, Function1D y_upper):
         """
         Integrates a two-dimensional function over a finite interval.
 
         :param double x_lower: Lower limit of integration in the x dimension.
         :param double x_upper: Upper limit of integration in the x dimension.
-        :param double y_lower: Lower limit of integration in the y dimension.
-        :param double y_upper: Upper limit of integration in the y dimension.
+        :param Function1D y_lower: Lower limit of integration in the y dimension.
+        :param Function1D y_upper: Upper limit of integration in the y dimension.
 
         :returns: Definite integral of a two-dimensional function.
         """

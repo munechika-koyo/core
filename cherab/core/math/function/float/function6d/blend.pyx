@@ -31,7 +31,7 @@ cdef class Blend6D(Function6D):
     this function is as follows:
 
     .. math::
-        v = (1 - f_m(x)) f_1(x) + f_m(x) f_2(x)
+        v = (1 - f_m(x, y, z, u, w, v)) f_1(x, y, z, u, w, v) + f_m(x, y, z, u, w, v) f_2(x, y, z, u, w, v)
 
     The value of the mask function is clamped to the range [0, 1] if the sampled
     value exceeds the required range.

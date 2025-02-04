@@ -10,6 +10,56 @@ documentation and the Cherab function tutorials.
 Cherab previously provided vector functions which were not present in Raysect.
 New codes should prefer the Raysect vector functions, but the old aliases are preserved for backwards compatibility.
 
+The Function6D framework in Cherab aims to provide a framework for building six-dimensional distribution functions.
+The relation of Function6D to distribution functions makes it domain specific, and so it was included in Cherab's math module.
+It follows closely Raysect's function framework.
+
+6D Scalar Functions
+-------------------
+
+.. autoclass:: cherab.core.math.function.float.function6d.base.Function6D
+   :members:
+   :special-members: __call__
+
+.. autoclass:: cherab.core.math.function.float.function6d.constant.Constant6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.arg.Arg6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Exp6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Sin6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Cos6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Tan6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Asin6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Acos6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Atan6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Atan4Q6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Sqrt6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.cmath.Erf6D
+   :show-inheritance:
+
+.. autoclass:: cherab.core.math.function.float.function6d.blend.Blend6D
+   :show-inheritance:
+
 2D Vector Functions
 -------------------
 

@@ -1,6 +1,12 @@
 Project Changelog
 =================
 
+Release 1.6.0 (TBD)
+-------------------
+
+New:
+* Add Function6D framework. (#478)
+
 Release 1.5.0 (27 Aug 2024)
 -------------------
 

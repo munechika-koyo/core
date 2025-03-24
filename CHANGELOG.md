@@ -6,7 +6,7 @@ Release 1.6.0 (TBD)
 
 New:
 * Add e_field attribute to Plasma object for electric field vector. (#465)
-
+* Add Integrator2D base class for integration of two-dimensional functions. (#472)
 
 Release 1.5.0 (27 Aug 2024)
 -------------------

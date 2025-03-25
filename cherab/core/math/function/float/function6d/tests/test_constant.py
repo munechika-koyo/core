@@ -32,4 +32,5 @@ class TestConstant6D(unittest.TestCase):
         testvals = [-1e10, -7, -0.001, 0.0, 0.00003, 10, 2.3e49]
         for x in testvals:
             constant = Constant6D(x)
+            # Test with a single set of values since it's a constant function
             self.assertEqual(constant(500, 1.5, -3.14, 2.7, 1.8, 3.6), x, "Constant6D call did not match reference value.")

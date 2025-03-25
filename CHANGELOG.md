@@ -5,6 +5,7 @@ Release 1.6.0 (TBD)
 -------------------
 
 New:
+* Add Function6D framework. (#478)
 * Add e_field attribute to Plasma object for electric field vector. (#465)
 * Add Integrator2D base class for integration of two-dimensional functions. (#472)
 

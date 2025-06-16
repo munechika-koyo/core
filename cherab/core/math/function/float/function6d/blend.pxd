@@ -1,6 +1,8 @@
-# Copyright 2016-2022 Euratom
-# Copyright 2016-2022 United Kingdom Atomic Energy Authority
-# Copyright 2016-2022 Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas
+# cython: language_level=3
+
+# Copyright 2016-2025 Euratom
+# Copyright 2016-2025 United Kingdom Atomic Energy Authority
+# Copyright 2016-2025 Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas
 #
 # Licensed under the EUPL, Version 1.1 or – as soon they will be approved by the
 # European Commission - subsequent versions of the EUPL (the "Licence");
@@ -16,5 +18,8 @@
 # See the Licence for the specific language governing permissions and limitations
 # under the Licence.
 
-from .integrators1d import Integrator1D, GaussianQuadrature
-from .integrators2d import Integrator2D
+from cherab.core.math.function.float.function6d.base cimport Function6D
+
+
+cdef class Blend6D(Function6D):
+    cdef Function6D _f1, _f2, _mask
